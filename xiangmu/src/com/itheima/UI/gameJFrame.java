@@ -8,13 +8,17 @@ public class gameJFrame extends JFrame {
         initJFrame();
 
         //初始化菜单
-
         initJMenuBar();
+
+        //初始化图片
+        initImage();
+
         //设置窗口是否可见
         this.setVisible(true);
 
     }
 
+    //初始化JMenuBar
     private void initJMenuBar() {
         //菜单头部
         JMenuBar jMenuBar = new JMenuBar();
@@ -45,6 +49,7 @@ public class gameJFrame extends JFrame {
         this.setJMenuBar(jMenuBar);
     }
 
+    //初始化JFrame
     private void initJFrame() {
         //设置窗口大小
         this.setSize(603, 680);
@@ -56,5 +61,12 @@ public class gameJFrame extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //设置窗口居中方式
         this.setLocationRelativeTo(null);
+    }
+
+    //初始化项目
+    private void initImage() {
+        ImageIcon icon = new ImageIcon("D:\\java_base\\xiangmu\\image\\animal\\animal5\\2.jpg");
+        JLabel jLabel = new JLabel((icon));
+        this.add(jLabel);
     }
 }
