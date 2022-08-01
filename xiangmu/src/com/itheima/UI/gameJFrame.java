@@ -61,12 +61,21 @@ public class gameJFrame extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //设置窗口居中方式
         this.setLocationRelativeTo(null);
+        //取消默认的布局方式
+        this.setLayout(null);
     }
 
-    //初始化项目
+    //初始化图片
     private void initImage() {
-        ImageIcon icon = new ImageIcon("D:\\java_base\\xiangmu\\image\\animal\\animal5\\2.jpg");
-        JLabel jLabel = new JLabel((icon));
-        this.add(jLabel);
+        int num = 1;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                JLabel jLabel = new JLabel((new ImageIcon("D:\\java_base\\xiangmu\\image\\animal\\animal5\\" + num + ".jpg")));
+                jLabel.setBounds(105 * j, 105 * i, 105, 105);
+                this.getContentPane().add(jLabel);
+                num++;
+            }
+        }
+
     }
 }
